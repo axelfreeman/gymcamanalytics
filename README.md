@@ -2,6 +2,8 @@
 
 GymCam turns the cameras a gym already has into automatic attendance and trainer-performance analytics — **no new hardware, no check-ins**.
 
+![GymCam — your cameras turned into attendance analytics](hero.jpg)
+
 Feed it the existing CCTV stream and the class schedule; it recognizes trainers, counts attendees per class, and reports what's actually happening: which classes are full, which are dead, and which trainers fill the room.
 
 ## Why
