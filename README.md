@@ -17,6 +17,20 @@ GymCam reuses what's already in the building and maps counts to **classes and tr
 - **Class performance** — every class ranked by fill rate, so dead classes are obvious
 - **Revenue insights** — most profitable vs. least profitable classes
 
+## What you actually get
+
+- **Zero install** — cameras already do the counting (security cameras are required in nearly every country). No sensors, no mounting, no new hardware.
+- **No check-in friction** — stop making members do a meaningless task; people just show up.
+- **Class truth** — which classes are full and which are dead, not the paper log anyone can fudge.
+- **Trainer accountability** — real fill rate + no-shows per trainer; the "16 becomes 20" rounding dies.
+- **Occupancy & density** — overfull classes and cramped rooms are a pricing / scaling / staffing signal.
+- **Room optimization** — see the big room idle while classes squeeze into the small one; swap and fix.
+- **Equipment utilization** — which machines are actually used; sell, buy, or rearrange.
+- **Density heatmaps** — attraction points and dead zones; change the layout with data.
+- **Demographics** — gender + approximate age breakdown (within GDPR / local law).
+- **Digital twin** — treat the gym as a measurable 3D space; a live model of what's working and what to cut.
+- **AI-native** — an MCP server, so your AI agent reads the data and answers "how's my gym doing today."
+
 ## Install
 
 One command, straight from this repo (requires [uv](https://astral.sh/uv)):
