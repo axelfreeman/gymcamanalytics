@@ -9,3 +9,6 @@ build/
 .DS_Store
 .agents/
 competitors.md
+site/
+deploy/
+skills-lock.json
