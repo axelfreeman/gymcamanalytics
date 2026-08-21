@@ -16,14 +16,8 @@ GymCam turns the cameras a gym already has into attendance + trainer-performance
 
 ## Setup
 
-1. Get an API key at https://gymcamanalytics.com/get-key
-2. Set `GYMCAM_API_KEY`
-3. Add the MCP server: `uvx --from git+https://github.com/axelfreeman/gymcamanalytics gymcam`
-
-Install this skill with a symlink (so `git pull` keeps it fresh):
-`ln -s "$PWD" ~/.agents/skills/gymcam-analytics`
-
-Peek at the tool output without wiring MCP: `uv run scripts/demo.py`
+1. Get an API key at https://gymcamanalytics.com/get-key and set `GYMCAM_API_KEY`.
+2. Install and wire the MCP server into your agent — full per-agent instructions are in the README.
 
 ## Workflows
 
