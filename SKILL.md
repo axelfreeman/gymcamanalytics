@@ -1,6 +1,6 @@
 ---
 name: gymcam-analytics
-description: Query gym attendance, trainer performance, and class profitability via the GymCam MCP server. Use when the user asks about gym attendance, which classes or trainers are popular, dead classes to cut, or gym revenue per class.
+description: Turn a gym's existing cameras and class schedule into attendance and trainer-performance analytics — daily summaries, per-trainer fill rates and no-shows, classes ranked by profitability. Use when a gym owner asks which classes to cut, who their best trainer is, how busy the gym is today, or which classes make money — no check-ins, no new hardware.
 ---
 
 # GymCam Analytics

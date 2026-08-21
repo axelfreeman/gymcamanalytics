@@ -1,5 +1,7 @@
 # GymCam Analytics
 
+[![skills.sh](https://skills.sh/b/axelfreeman/gymcamanalytics)](https://skills.sh/axelfreeman/gymcamanalytics)
+
 GymCam turns the cameras a gym already has into automatic attendance and trainer-performance analytics — **no new hardware, no check-ins**.
 
 ![GymCam — your cameras turned into attendance analytics](hero.jpg)
