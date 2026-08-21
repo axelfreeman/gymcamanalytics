@@ -41,6 +41,20 @@ One command, straight from this repo (requires [uv](https://astral.sh/uv)):
 uvx --from git+https://github.com/axelfreeman/gymcamanalytics gymcam
 ```
 
+Peek at the tool output without wiring MCP:
+
+```bash
+uv run scripts/demo.py
+```
+
+## Skill (optional)
+
+`SKILL.md` documents the GymCam tools for any agent that loads skills. Install with a symlink so `git pull` keeps it fresh:
+
+```bash
+ln -s "$PWD" ~/.agents/skills/gymcam-analytics
+```
+
 ## Connect to your AI agent
 
 Same command, different config file per client.
