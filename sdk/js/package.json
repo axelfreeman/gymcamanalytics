@@ -1,0 +1,15 @@
+{
+  "name": "@gymcam/sdk",
+  "version": "1.0.0",
+  "description": "Official JavaScript/TypeScript SDK for GymCam Analytics — gym attendance and trainer-performance analytics.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/axelfreeman/gymcamanalytics"
+  },
+  "homepage": "https://gymcamanalytics.com",
+  "keywords": ["gymcam", "gym", "attendance", "analytics", "fitness", "mcp"],
+  "engines": { "node": ">=18" }
+}

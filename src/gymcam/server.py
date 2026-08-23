@@ -17,8 +17,10 @@ from mcp.server.fastmcp import FastMCP
 
 SIGNUP_URL = "https://gymcamanalytics.com/get-key"
 API_KEY_ENV = "GYMCAM_API_KEY"
+MCP_HOST = os.environ.get("MCP_HOST", "127.0.0.1")
+MCP_PORT = int(os.environ.get("MCP_PORT", "8096"))
 
-mcp = FastMCP("gymcam")
+mcp = FastMCP("gymcam", host=MCP_HOST, port=MCP_PORT)
 
 
 def _gate() -> str | None:
@@ -135,7 +137,11 @@ def get_revenue_insights() -> dict:
 
 
 def main() -> None:
-    mcp.run()
+    transport = os.environ.get("MCP_TRANSPORT", "stdio")
+    if transport == "streamable-http":
+        mcp.run(transport="streamable-http")
+    else:
+        mcp.run()
 
 
 if __name__ == "__main__":
