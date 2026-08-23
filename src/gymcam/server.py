@@ -11,6 +11,7 @@ against the real schema.
 
 from __future__ import annotations
 
+import json
 import os
 
 from mcp.server.fastmcp import FastMCP
@@ -58,6 +59,25 @@ _TRAINERS = {
 _NOTE = "Sample data — live once your gym's cameras are connected."
 
 
+def _ui(resource_uri: str = "ui://gymcam/dashboard") -> dict:
+    """Attach MCP Apps UI metadata so agents can render an interactive view."""
+    return {"ui": {"resourceUri": resource_uri}}
+
+
+@mcp.resource("ui://gymcam/dashboard")
+def dashboard_ui() -> str:
+    """Interactive dashboard UI definition (MCP Apps ui:// resource)."""
+    return json.dumps({
+        "title": "GymCam — Today's Summary",
+        "type": "dashboard",
+        "widgets": [
+            {"type": "metric", "label": "Classes held", "path": "classes_held"},
+            {"type": "metric", "label": "Total attendance", "path": "total_attendance"},
+            {"type": "list", "label": "Top classes", "path": "top_classes"},
+        ],
+    })
+
+
 @mcp.tool()
 def get_today_summary(gym_id: str = "demo") -> dict:
     """Daily attendance summary: classes held, total attendance, top classes."""
@@ -67,6 +87,7 @@ def get_today_summary(gym_id: str = "demo") -> dict:
     total = sum(c["attended"] for c in _DEMO_CLASSES)
     top = sorted(_DEMO_CLASSES, key=lambda c: -c["attended"])[:3]
     return {
+        "_meta": _ui(),
         "gym_id": gym_id,
         "classes_held": len(_DEMO_CLASSES),
         "total_attendance": total,
@@ -87,6 +108,7 @@ def get_trainer_attendance(trainer: str, period: str = "week") -> dict:
             "error": f"Unknown trainer '{trainer}'. Known: {', '.join(sorted(_TRAINERS))}",
         }
     return {
+        "_meta": _ui(),
         "trainer": trainer,
         "period": period,
         "classes": t["classes_week"] if period == "week" else max(1, t["classes_week"] // 6),
@@ -104,6 +126,7 @@ def get_class_performance(limit: int = 8) -> dict:
         return {"error": gate}
     ranked = sorted(_DEMO_CLASSES, key=lambda c: -(c["attended"] / c["slots"]))
     return {
+        "_meta": _ui(),
         "ranked": [
             {
                 "class": c["name"],
@@ -126,6 +149,7 @@ def get_revenue_insights() -> dict:
         return {"error": gate}
     ranked = sorted(_DEMO_CLASSES, key=lambda c: -c["revenue"])
     return {
+        "_meta": _ui(),
         "most_profitable": [
             {"class": c["name"], "revenue": c["revenue"]} for c in ranked[:3]
         ],

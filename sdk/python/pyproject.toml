@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "gymcam-sdk"
-version = "1.0.0"
+version = "1.1.0"
 description = "Official Python SDK for GymCam Analytics — gym attendance and trainer-performance analytics."
 readme = "README.md"
 license = { text = "MIT" }
@@ -12,6 +12,9 @@ authors = [{ name = "Axel Freeman" }]
 requires-python = ">=3.9"
 keywords = ["gymcam", "gym", "attendance", "analytics", "fitness", "mcp"]
 dependencies = ["httpx>=0.24"]
+
+[project.scripts]
+gymcam = "gymcam_sdk.cli:main"
 
 [project.urls]
 Homepage = "https://gymcamanalytics.com"
