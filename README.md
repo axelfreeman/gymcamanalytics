@@ -107,3 +107,10 @@ Pre-launch. The MCP server and tool schema are live; tools return sample data un
 ## License
 
 MIT © 2026 Axel Freeman
+
+## Need this done for you?
+
+The stack behind this repo runs as a service: [marketing engineering, turnkey](https://axelfreeman.com/marketing-engineer.html) —
+Sprint $900 one-time, Engine $1,900/month, full build $2,900. Scope and prices are published before the first call.
+If you run a local or multi-site business, the countable version of the same work is here:
+[marketing engineer for local business](https://axelfreeman.com/marketing-engineer-for-local-business.html).
